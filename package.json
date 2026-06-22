@@ -1,0 +1,12 @@
+{
+  "name": "employee-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack MERN employee management system with React Vite frontend and Express API backend.",
+  "scripts": {
+    "install:all": "node scripts/install-all.js",
+    "dev": "node scripts/dev.js",
+    "server": "node backend/src/server.js",
+    "client": "node frontend/node_modules/vite/bin/vite.js --host 0.0.0.0"
+  }
+}
