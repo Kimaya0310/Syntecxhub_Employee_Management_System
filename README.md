@@ -93,3 +93,29 @@ node node_modules/vite/bin/vite.js --host 0.0.0.0
 Frontend: `http://localhost:5173`
 
 Backend API: `http://localhost:5000/api/employees`
+
+## Deployment
+
+### Frontend on Vercel
+
+This repo includes `vercel.json`, so Vercel can build the React Vite app from the `frontend` folder.
+
+In Vercel, add this environment variable:
+
+```bash
+VITE_API_URL=https://your-backend-url.com/api
+```
+
+Then redeploy the project.
+
+### Backend
+
+Deploy the backend separately on a Node.js host such as Render, Railway, or Cyclic.
+
+Add these environment variables on the backend host:
+
+```bash
+MONGODB_URI=your_mongodb_atlas_connection_string
+CLIENT_URL=https://your-vercel-frontend-url.vercel.app
+PORT=5000
+```
